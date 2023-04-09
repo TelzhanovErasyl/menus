@@ -5,7 +5,7 @@ let burgetLineSecond = document.querySelector('.burger-line-second')
 let burgerLineLast = document.querySelector('.last')
 
 burger.addEventListener('click', function () {
-    navs.classList.toggle('opened')
+    navs.classList.toggle('show-links')
     this.classList.toggle('burger-closing')
     burgetLineFirst.classList.toggle('rotate-1')
     burgetLineSecond.classList.toggle('rotate-2')
@@ -19,7 +19,9 @@ let close = document.querySelector('.exit')
 
 burger2.addEventListener('click', function () {
     navig.classList.toggle('navigation-opened')
+    document.body.classList.toggle('overlay')
 })
 close.addEventListener('click', function () {
     navig.classList.remove('navigation-opened')
+    document.body.classList.remove('overlay')
 })
